@@ -1,5 +1,33 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-gopkg-eapache-channels.v1 (1.1.0-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * Update section to golang
+  * Update maintainer to team+pkg-go@tracker.debian.org
+  * Bump debhelper-compat to 13
+  * Update Standards-Version to 4.6.2 (no changes)
+  * Add github.com/eapache/channels to Go-Import-Path
+  * Add Multi-Arch hint
+  * Add autopkgtest-go
+  * Add Rules-Requires-Root
+  * Update uscan watch file version to 4
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 01 Jan 2023 17:04:26 +0800
+
+golang-gopkg-eapache-channels.v1 (1.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #825164)
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 27 May 2016 10:53:11 +0200

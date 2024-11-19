@@ -1,15 +1,33 @@
-Source: template-repository
-Section: unknown
+Source: golang-gopkg-eapache-channels.v1
+Section: golang
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Vincent Bernat <bernat@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-gopkg-eapache-queue.v1-dev
+Standards-Version: 4.6.2
+Homepage: https://github.com/eapache/channels
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-gopkg-eapache-channels.v1
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-gopkg-eapache-channels.v1.git
+XS-Go-Import-Path: gopkg.in/eapache/channels.v1,
+                   github.com/eapache/channels
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-gopkg-eapache-channels.v1-dev
+Provides: golang-github-eapache-channels-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-gopkg-eapache-queue.v1-dev,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: collection of helpers around golang's existing channels
+ This package contains a collection of helper functions and special
+ types for working with and extending Go's existing channels.
+ .
+ The heart consists of several distinct implementations of the Channel
+ interface, including channels backed by special buffers (resizable,
+ infinite, ring buffers, etc) and other useful types. A "black hole"
+ channel for discarding unwanted values rounds out the set.
